@@ -4,7 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-// 간단한 369게임 *** 3, 6, 9 가 포함된 숫자에 박수치기 -> String.contains(), String.charAt()
+// 간단한 369게임 = 3, 6, 9 가 포함된 숫자에 박수치기
+// 풀이: String.contains(), String.charAt() 또는 정규식(replaceAll) 또는 replace
 public class Solution1926 {
     public static void main(String[] args) throws IOException {
 
@@ -14,6 +15,7 @@ public class Solution1926 {
 
         for (int i = 1; i <= n; i++) {
             String str = String.valueOf(i); // ex) i = 23일 때, String으로 바꾸면 str.length = 2
+            // valueOf를 사용하면 null 값이어도 출력. (Null Pointer Exception 안터짐)
 
             if (str.contains("3") || str.contains("6") || str.contains("9")) {
                 for (int j = 0; j < str.length(); j++) {

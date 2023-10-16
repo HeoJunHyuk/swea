@@ -3,7 +3,8 @@ package swea.D2;
 import java.io.IOException;
 import java.util.Scanner;
 
-// 패턴 마디의 길이 *** 반복되는 음절 찾기 -> String.substring(_, _)
+// 패턴 마디의 길이 = 반복되는 음절 찾기
+// 풀이: String.substring(_, _)
 public class Solution2007 {
     public static void main(String[] args) throws IOException {
 
