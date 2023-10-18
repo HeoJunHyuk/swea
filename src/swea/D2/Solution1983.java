@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Scanner;
 
 // 조교의 성적 매기기
-// 풀이:
+// 풀이: 총 점수를 담은 scores[] 생성, K번째 학생의 점수를 goal로 따로 빼고 sort, grade[i/(N/10)]
 public class Solution1983 {
     public static void main(String[] args) throws IOException {
 
