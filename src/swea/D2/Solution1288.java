@@ -3,7 +3,7 @@ package swea.D2;
 import java.util.Scanner;
 
 // 새로운 불면증 치료법
-// 풀이:
+// 풀이: 10개의 boolean 배열을 만들어서 해당 자리 숫자가 나오면 true로 변경해주고, cnt++ -> if(count == 10) break;
 public class Solution1288 {
 
     public static void main(String[] args) {
@@ -12,24 +12,24 @@ public class Solution1288 {
         T=sc.nextInt();
         for(int test_case = 1; test_case <= T; test_case++)
         {
-            boolean arr[]=new boolean[10];
-            String A=sc.next();
-            int num=Integer.parseInt(A);
-            int count=0;
-            int cnt=1;
+            boolean arr[] = new boolean[10];
+            String A = sc.next();
+            int N=Integer.parseInt(A);
+            int count = 0;
+            int num = 1;  // N에 곱할 배수
             while(true){
-                for(int i=0;i<A.length();i++){
-                    int temp=Integer.parseInt(A.substring(i,i+1));
-                    if(arr[temp]==false){
-                        arr[temp]=true;
+                for(int i=0; i<A.length(); i++){
+                    int temp = Integer.parseInt(A.substring(i, i+1));  // temp = i 자리
+                    if(arr[temp] == false){
+                        arr[temp] = true;
                         count++;
                     }
                 }
-                if(count==10)
+                if(count == 10)
                     break;
                 else{
-                    cnt++;
-                    A=Integer.toString(num*cnt);
+                    num++;
+                    A=Integer.toString(N * num);
                 }
             }
             System.out.println("#"+test_case+" "+A);
