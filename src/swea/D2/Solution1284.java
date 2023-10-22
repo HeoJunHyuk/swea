@@ -1,6 +1,5 @@
 package swea.D2;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 // 수도 요금 경쟁
