@@ -2,7 +2,7 @@ package swea.D3;
 
 import java.util.Scanner;
 
-// [S/W 문제해결 기본] 1일차 - View
+// [S/W 문제 해결 기본] 1일차 - View
 // 풀이: 좌우 2칸씩의 건물들 중 max 구하고 이를 arr[i] > max 일 때, arr[i] - max
 public class Solution1206 {
 

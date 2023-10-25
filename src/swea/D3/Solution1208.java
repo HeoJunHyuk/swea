@@ -2,7 +2,7 @@ package swea.D3;
 
 import java.util.Scanner;
 
-// [S/W 문제해결 기본] 1일차 - Flatten
+// [S/W 문제 해결 기본] 1일차 - Flatten
 // 풀이: Arrays.sort(arr), arr[0]--; arr[99]++; 출력 전에 다시 sort 해준 뒤 최대 - 최소
 public class Solution1208 {
 
