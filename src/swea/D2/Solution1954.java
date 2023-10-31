@@ -2,7 +2,7 @@ package swea.D2;
 
 import java.util.Scanner;
 
-// 달팽이 숫자 ********
+// 달팽이 숫자 ******
 // 풀이: dx, dy를 우,하,좌,상 순으로 만들고, map[N][N]을 만들어서 다 0으로 초기화. dir을 사용해서 배열 범위를 벗어나거나 뒤의 배열이 0이 아니면 방향 전환
 public class Solution1954 {
     static int[] dx = { 0, 1, 0, -1 }; // 우 하 좌 상 순서

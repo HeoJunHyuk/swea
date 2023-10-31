@@ -34,10 +34,8 @@ public class Solution2817 {
             }
             return;
         }
-
         // 현재 위치의 숫자를 선택한 경우
         search(cnt + 1, sum + arr[cnt]);
-
         // 현재 위치의 숫자를 선택하지 않은 경우
         search(cnt + 1, sum);
     }
