@@ -2,7 +2,7 @@ package swea.D3;
 
 import java.util.Scanner;
 
-// 오목 판정 ***
+// 오목 판정 *** -> simulation
 // 풀이: dx, dy, dir 사용   처음부터 끝까지 확인할거기 때문에 8방향 말고, 좌, 우, 좌하, 우하 만 확인했음.
 // for문 break할때, 새로운 팁 배움 -> 이름 : for(~) {... break 이름;}
 public class Solution11315 {
