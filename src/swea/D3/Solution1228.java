@@ -8,6 +8,7 @@ import java.util.Scanner;
 // [S/W 문제해결 기본] 8일차 - 암호문1
 // 풀이: LinkedList<Integer> 써서 add 사용. x번째 다음에 수를 입력하려면, .add(x, 숫자) 로 하면 됨.
 // BufferedReader -> br.readLine() / StringTokenizer -> st.nextToken() 사용하는 법도 익혀두기
+
 public class Solution1228 {
 
     public static void main(String[] args) throws IOException {
@@ -34,7 +35,7 @@ public class Solution1228 {
             }
             System.out.print("#" + tc + " ");
             for (int i = 0; i < 10; i++) {
-                System.out.print(list.get(i));
+                System.out.print(list.get(i) + " ");
             }
         }
     }
