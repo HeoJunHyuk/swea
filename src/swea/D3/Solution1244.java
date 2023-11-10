@@ -47,6 +47,7 @@ public class Solution1244 {
                 arr[i] = arr[j];
                 arr[j] = temp;
             }
+
         }
     }
 }

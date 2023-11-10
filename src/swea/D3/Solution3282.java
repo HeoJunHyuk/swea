@@ -8,31 +8,33 @@ import java.util.*;
 
 public class Solution3282 {
 
-    public static void main(String args[]) throws Exception
-    {
+    public static void main(String args[]) throws Exception {
+
         Scanner sc = new Scanner(System.in);
         StringBuffer sb = new StringBuffer();
-        int TC = sc.nextInt();
-        for(int tc=1; tc<=TC; tc++) {
+        int T = sc.nextInt();
+
+        for(int tc = 1; tc <= T; tc++) {
             sb.append("#").append(tc).append(" ");
 
-            int N = sc.nextInt();
-            int K = sc.nextInt();
+            int N = sc.nextInt();   // 물건의 개수
+            int K = sc.nextInt();   // 가방의 부피
 
-            int w[] = new int[N+1];
-            int cost[] = new int[N+1];
+            int w[] = new int[N + 1];
+            int cost[] = new int[N + 1];
 
-            for(int i=1; i<=N; i++){
-                w[i] = sc.nextInt();
-                cost[i] = sc.nextInt();
+            for(int i = 1; i <= N; i++){
+                w[i] = sc.nextInt();    // 해당 물건의 부피
+                cost[i] = sc.nextInt(); // 해당 물건의 가치
             }
 
             int dp[][] = new int[N+1][K+1];
-            for(int i=1; i<=N; i++){
-                for(int j=1; j<=K; j++){
+
+            for(int i = 1; i <= N; i++){
+                for(int j = 1; j <= K; j++){
                     // 현재 고려하고 있는 물건 i의 무게가 배낭의 용량 j보다 크면 해당 물건을 배낭에 넣을 수 없기 때문에, 직전 단계 최대 가치를 가져옴
                     if(w[i] > j){
-                        dp[i][j] = dp[i-1][j];
+                        dp[i][j] = dp[i - 1][j];
                     } else {
                         // dp[i - 1][j - w[i]] + cost[i] : 현재 물건을 넣었을 때의 가치. 물건을 넣으면 무게가 차감되고, 그에 따른 추가 가치가 더해짐
                         // dp[i - 1][j]: 현재 물건을 넣지 않았을 때의 가치. 이전 단계에서의 최대 가치를 그대로 가져옴
