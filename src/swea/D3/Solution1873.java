@@ -108,3 +108,116 @@ public class Solution1873 {
     }
 
 }
+
+/** 내가 풀었던 풀이. 전차가 움직이도 않아도 방향은 바꿔줘야 함. 이를 틀렸다가 수정함.
+ * import java.util.Scanner;
+ *
+ * // 상호의 배틀필드
+ *
+ * public class Solution {
+ *
+ *     static int H, W, N;
+ *     static char[][] board;
+ *     static char[] input;
+ *     static char[] v = {'<', '>', '^', 'v'};
+ *     static int[] dx = {0, 0, -1, 1};    // 좌 우 상 하
+ *     static int[] dy = {-1, 1, 0, 0};
+ *
+ *     public static void main(String[] args) {
+ *         Scanner sc = new Scanner(System.in);
+ *         int T = sc.nextInt();
+ *
+ *         for (int tc = 1; tc <= T; tc++) {
+ *             H = sc.nextInt();   // 높이
+ *             W = sc.nextInt();   // 너비
+ *             board = new char[H][W];   // 게임판
+ *             int x = 0;
+ *             int y = 0;
+ *             int dir = 0;
+ *
+ *
+ *             for (int i = 0; i < H; i++) {
+ *                 board[i] = sc.next().toCharArray();
+ *
+ *                 game : for (int j = 0; j < W; j++) {
+ *                     for (int k = 0; k < 4; k++) {
+ *                         if (board[i][j] == v[k]) {  // 전차 좌표 및 머리 방향 찾기
+ *                             x = i;
+ *                             y = j;
+ *                             dir = k;
+ *                             break game;
+ *                         }
+ *                     }
+ *                 }
+ *             }
+ *
+ *             N = sc.nextInt();   //사용자 입력 받음
+ *             input = new char[N];
+ *             String str = sc.next();
+ *             for (int i = 0; i < N; i++) {
+ *                 input[i] = str.charAt(i);
+ *             }
+ *
+ *             battle(x, y, dir);
+ *
+ *             System.out.print("#" + tc + " ");
+ *             for (int i = 0; i < H; i++) {
+ *                 System.out.print(new String(board[i]));
+ *                 System.out.println();
+ *             }
+ *         }
+ *     }
+ *
+ *     private static void battle(int i, int j, int dir) {
+ *         int x = i;
+ *         int y = j;
+ *
+ *         for (int c = 0; c < N; c++) {
+ *
+ *             // S: 포탄 발사
+ *             if (input[c] == 'S') {
+ *                 int nx = x;
+ *                 int ny = y;
+ *                 while (nx >= 0 && ny >= 0 && nx < H && ny < W) {
+ *                     nx += dx[dir];
+ *                     ny += dy[dir];
+ *                     if (nx < 0 || ny < 0 || nx >= H || ny >= W) {
+ *                         break; // 포탄이 맵 밖으로 나갔을 때
+ *                     }
+ *                     if (board[nx][ny] == '#') {
+ *                         break; // 포탄이 강철 벽에 부딪혔을 때
+ *                     } else if (board[nx][ny] == '*') {
+ *                         board[nx][ny] = '.';
+ *                         break; // 포탄이 벽돌 벽을 파괴했을 때
+ *                     }
+ *                 }
+ *             } else {
+ *                 // 방향 전환
+ *                 int newDir = dir;
+ *                 if (input[c] == 'L') {
+ *                     newDir = 0; // 좌
+ *                 } else if (input[c] == 'R') {
+ *                     newDir = 1; // 우
+ *                 } else if (input[c] == 'U') {
+ *                     newDir = 2; // 상
+ *                 } else if (input[c] == 'D') {
+ *                     newDir = 3; // 하
+ *                 }
+ *
+ *                 // 전차의 방향 바꾸기
+ *                 board[x][y] = v[newDir];
+ *                 int nx = x + dx[newDir];
+ *                 int ny = y + dy[newDir];
+ *                 if (nx >= 0 && ny >= 0 && nx < H && ny < W && board[nx][ny] == '.') {    // 이동 가능할 경우
+ *                     board[nx][ny] = board[x][y];
+ *                     board[x][y] = '.';
+ *                     x = nx;
+ *                     y = ny;
+ *                 }
+ *                 dir = newDir;    // 움직이지 않아도 dir 방향은 수정
+ *             }
+ *         }
+ *     }
+ *
+ * }
+ */

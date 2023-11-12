@@ -39,7 +39,6 @@ public class Solution3307 {
             System.out.println("#" + tc + " " + max);   // dp[N -1] 이 최대가 아님. 때문에 max를 갱신해줘야 함
         }
     }
-
 }
 
 /** dp로 푼 풀이 2 -> dp[N + 1][N + 1]로 해결
