@@ -2,12 +2,12 @@ package swea.D3;
 
 import java.util.Scanner;
 
-// 수의 새로운 연산 **
+// 수의 새로운 연산 ***
 // 풀이: 배열 X, 규칙을 찾아야 함. for문을 잘 사용해야 함.
 //      for (int i = 1;; i++) {
 //          for (int x = 1, y = i; x <= i; x++, y--)
 
-public class Solution1493 {
+public class Solution1493v {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
@@ -33,10 +33,10 @@ public class Solution1493 {
     // 값을 받아서, 좌표 구하기
     private static int[] getCoordi(int value) {
         int count = 1;
-        for (int i = 1;; i++) {
-            for (int x = 1, y = i; x <= i; x++, y--) {
+        for (int i = 1;; i++) { // i는 1씩 계속 증가
+            for (int x = 1, y = i; x <= i; x++, y--) {  // (1,1) -> (1,2) -> (2,1) -> (1,3) ->... 좌표마다 count로 ++하면서 값을 넣는 식
                 if (count == value) {
-                    return new int[]{x, y};
+                    return new int[]{x, y}; // 좌표 구해서 배열에 넣기
                 }
                 count++;
             }

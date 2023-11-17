@@ -6,7 +6,7 @@ import java.util.Scanner;
 // 풀이: 완전 탐색 -> DFS 재귀 호출 ( greedy X ) + 시간 초과를 해결하기 위해, chance가 문자열보다 클 때, chance = arr.length
 // int -> int[] :  arr = Integer.toString(num).chars().map(c -> c - '0').toArray();
 
-public class Solution1244 {
+public class Solution1244V {
     static String[] arr;
     static int max, chance;
 
@@ -19,7 +19,7 @@ public class Solution1244 {
 
             max = 0;
             // 시간초과 최적화
-            if(arr.length < chance) {	// swap 횟수가 자릿수보다 클 때
+            if(arr.length < chance) {	// swap 횟수가 자릿수보다 클 때   -> 이게 틀린 부분 같음 , 홀수번 남으면 max의 마지막 두 숫자를 바꾸어야함
                 chance = arr.length;	// 자릿수만큼만 옮겨도 전부 옮길 수 있음
             }
             dfs(0, 0);

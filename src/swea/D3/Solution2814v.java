@@ -6,7 +6,7 @@ import java.util.Scanner;
 // 최장 경로 ***
 // 풀이: 무방향 그래프 -> dfs, visited[], ArrayList<>() 사용해서 방문했던 곳은 패스하고, 새로 방문하는 정점들을 타고 들어가면서 cnt++
 // 최장 경로 = 방문한 정점의 수
-public class Solution2814 {
+public class Solution2814v {
 
     static int N, M, ans;
     static boolean[] visited;

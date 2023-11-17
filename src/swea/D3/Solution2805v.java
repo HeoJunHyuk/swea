@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 // 농작물 수확하기 ***
 // 풀이: N / 2 = mid 를 기준으로 위, 아래 나눠서 합치기. 배열의 시작점과 종료점을 바꿔가면서 각 행을 더해줌
-public class Solution2805 {
+public class Solution2805v {
 
     public static void main(String args[]) throws Exception {
         Scanner sc = new Scanner(System.in);

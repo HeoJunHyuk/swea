@@ -6,6 +6,7 @@ import java.util.Scanner;
 // [S/W 문제해결 기본] 최빈수 구하기
 // 풀이: 1000개의 점수를 scores[]에 입력 받고 이를 정렬해준 후, 내림차순으로 다시 정렬.
 // if문 활용하여 똑같은 점수가 나오면 cnt++, 이를 max와 비교, 해당 max를 만든 때의 scores[i]가 result
+// 다른 풀이: 0~100점이므로, arr[101]을 만들고 입력값으로 들어오는 점수 부분을 ++ 해주고 나중에 arr배열 중에서 가장 큰 값을 출력
 public class Solution1204 {
 
     public static void main(String[] args) {

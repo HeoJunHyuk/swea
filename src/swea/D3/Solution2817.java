@@ -30,7 +30,7 @@ public class Solution2817 {
     private static void search(int cnt, int sum) {
         if (cnt == N) {
             if (sum == K) {
-                result += 1;
+                result++;
             }
             return;
         }

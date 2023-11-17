@@ -5,7 +5,7 @@ import java.util.Scanner;
 // N-Queen ****
 // 풀이: DFS로 풀어야 함. board[N]을 만들어 열을 내려가면서 해당 행에 어떤 위치에 퀸을 놓았는지 명시. 재귀 호출을 통해 위쪽 열(curr = 0)부터 퀸을 놓고 아래로(curr = N) 내려가는 방식
 
-public class Solution2806 {
+public class Solution2806V {
 
     static int board[]; // 퀸의 위치를 담는다. (board[0]=1 -> (0,1)에 하나의 퀸이 있다. board[1] = 3 -> (1,3)에 하나의 퀸이 있다.)
     static int answer;
@@ -50,6 +50,7 @@ public class Solution2806 {
         }
     }
 }
+
 /**
  * private static int answer;
  *     public static void main(String[] args) {
@@ -82,7 +83,7 @@ public class Solution2806 {
  *     }
  *
  *     private static boolean isPromising(int next, int[] row) {
- *         for (int i = 0; i < next; i++) {
+ *         for (int i = 0; i < next; i++) { // 새로 놓는 퀸 이전까지 놨던 퀸들의 위치랑 비교
  *             if (row[i] == row[next] || Math.abs(row[i]-row[next]) == next - i) return false;
  *         }
  *         return true;

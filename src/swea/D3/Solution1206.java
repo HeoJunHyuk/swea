@@ -28,7 +28,7 @@ public class Solution1206 {
                         maxR = Math.max(arr[i + 1], arr[i + 2]);
                         max = Math.max(maxL, maxR);
                         cnt += (arr[i] - max);
-                    } else continue;
+                    }
                 }
             }
 
