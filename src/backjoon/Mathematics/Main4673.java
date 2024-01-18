@@ -1,7 +1,7 @@
 package backjoon.Mathematics;
 
 
-// 셀프 넘버
+// 셀프 넘버 [silver 5]
 // 풀이 : d 함수에 의해 리턴된 n 을 check 배열의 인덱스로 사용하여 해당 위치를 true로 바꿈
 // 10000 이하의 숫자만 확인하면 되기 때문에, n < 10001만 확인
 public class Main4673 {

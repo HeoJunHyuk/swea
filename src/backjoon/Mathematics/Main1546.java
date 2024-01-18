@@ -15,7 +15,7 @@ import java.util.Scanner;
  -> sb.append().append('\n') 로 모아주고, sout(sb)
 */
 
-// 평균
+// 평균 [bronze 1]
 // 풀이 : 단순 연산, 소수점을 반환해야 해서 float형을 사용해야 함.
 public class Main1546 {  // Main 으로 해야함, public class 는 Main 하나여야만 함.
 
